@@ -1,0 +1,45 @@
+\begin{tikzpicture}
+        \draw[<->] (-5,0) node[rotate=90, above]{$II. Choose$} --(5,0) node[right]{$IV. Execute$} ;
+        \draw[<->,] (0,-5)node[below]{$III. Negotiate$} --(0,5) node[above]{$I. Generate$};
+        \draw (0,0) circle (4);
+        \draw[-] (-3,3)--(3,-3);
+        \draw[-] (-3,-3)--(3,3);
+        \node[rotate=337.5] at (2,4)  {Planning};
+        \node[rotate=292.5] at (4,2)  {Performance};
+        \node[rotate=247.5] at (4,-2)  {Competitions};
+        \node[rotate=202.5] at (2,-4)  {Mixed Motive};
+        \node[rotate=157.5] at (-2,-4)  {Cognitive Conflict};
+        \node[rotate=112.5] at (-4,-2)  {Decision Making};
+        \node[rotate=67.5] at (-4,2)  {Intellective};
+        \node[rotate=22.5] at (-2,4)  {Creative};
+        \node[draw,circle,inner sep=1pt,color=cyan] at (-3.5,0.5) {\cite{fraune2017teammates}}; %2
+        \node[draw,circle,inner sep=1pt,color=cyan] at (-2.7,0.5) {\cite{deligianis2017impact}}; %4
+        \node[draw,circle,inner sep=1pt,color=cyan] at (-3.5,-0.5) {\cite{sembroski2017he}}; %5
+        \node[draw,circle,inner sep=1pt,color=violet] at (0.5,-3.5) {\cite{fraune2019human}}; %6
+        \node[draw,circle,inner sep=1pt,color=cyan] at (-2.7,-0.5) {\cite{haring2014would}}; %7
+        \node[draw,circle,inner sep=1pt,color=violet] at (0.5,-2.7) {\cite{chang2012effect}}; %8
+        \node[draw,circle,inner sep=1pt,color=violet] at (-1.9,0.5) {\cite{brandstetter2014peer}}; %13
+        \node[draw,circle,inner sep=1pt,color=violet] at (-1.9,-0.5) {\cite{salomons2018humans}}; %15
+        \node[draw,circle,inner sep=1pt,color=cyan] at (-3.1,1.2) {\cite{steain2019black}}; %16
+        \node[draw,circle,inner sep=1pt,color=darkgreen] at (0.5,-1.9) {\cite{shen2018stop}}; %17
+        \node[draw,circle,inner sep=1pt,color=orange] at (3.5,0.5) {\cite{fraune2014negative}}; %18
+        \node[draw,circle,inner sep=1pt,color=orange] at (2.7,0.5) {\cite{admoni2013dancing}}; %19
+        \node[draw,circle,inner sep=1pt,color=orange] at (1.9,0.5) {\cite{fraune2015rabble}}; %20
+        \node[draw,circle,inner sep=1pt,color=orange] at (-2.3,1.2) {\cite{fraune2017threatening}}; %21
+        \node[draw,circle,inner sep=1pt,color=orange] at (1.1,0.5) {\cite{Fraune-RSS-15}}; %22
+        \node[draw,circle,inner sep=1pt,color=violet] at (-1.1,0.5) {\cite{leite2015emotional}}; %23
+        \node[draw,circle,inner sep=1pt,color=violet] at (0.5,3.5) {\cite{fraune2019humangroup}}; %24
+        \node[draw,circle,inner sep=1pt,color=darkgreen] at (3.1,1.2) {\cite{jung2013engaging}}; %25
+        \node[draw,circle,inner sep=1pt,color=orange] at (2.3,1.2) {\cite{nawroj2014exploration}}; %26
+        
+        \node[draw,circle,inner sep=1pt,color=darkgreen] at (-2.7,1.9) {\cite{leite2015comparing}}; %27
+        \node[draw,circle,inner sep=1pt,color=darkgreen] at (-1.5,1.2) {\cite{tennent2019micbot}}; %29
+        \node[draw,circle,inner sep=1pt,color=darkgreen] at (2.7,1.9) {\cite{jung2018robot}}; %30
+        \node[draw,circle,inner sep=1pt,color=darkgreen] at (-0.5,3.5) {\cite{vazquez2017towards}}; %31
+        \matrix [draw,below left,font=\small] at (current bounding box.north east) {
+          \node [shape=circle, draw=cyan,label=right:Group Identity] {}; \\
+          \node [shape=circle, draw=violet,label=right:Group Phenomena] {}; \\
+          \node [shape=circle, draw=orange,label=right:Groups of Robots] {}; \\
+          \node [shape=circle, draw=darkgreen,label=right:Group Behaviour] {}; \\
+        };
+    \end{tikzpicture}

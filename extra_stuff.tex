@@ -1,0 +1,30 @@
+% Extra stuff file
+% This file is included before begin{document} environment
+% Use this to include extra packages and define your own commands
+% This way, you can easily grab a most recent version
+% of dissertation.tex file from the original repo
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{arydshln}
+\usepackage{algorithm}
+\usepackage{algorithmic}
+\usepackage{subcaption}
+\usepackage{amsmath}%
+\usepackage{tikz}%
+\usepackage{pgfplots}%
+\pgfplotsset{width=7cm,compat=1.7}%
+\pgfplotsset{%compat=1.11,
+    /pgfplots/ybar legend/.style={
+    /pgfplots/legend image code/.code={%
+       \draw[##1,/tikz/.cd,yshift=-0.25em]
+        (0cm,0cm) rectangle (3pt,0.8em);},
+   },
+}
+\usetikzlibrary{patterns}
+%\usepackage{ctable} 
+\definecolor{darkgreen}{RGB}{0,166,79}

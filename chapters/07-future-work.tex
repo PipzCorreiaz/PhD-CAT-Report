@@ -1,0 +1,68 @@
+\chapter{Perception of the Communication Network}
+\label{chapter:future-work}
+
+The current chapter proposes an approach to achieve the last research goal of this ongoing dissertation ---\textit{develop computational mechanisms for the robotic teammate to autonomously perceive the structural cohesion of the team}. In order to explore structural cohesion, we plan to analyse the flow of the communication between team members. We aim to examine the following research questions:
+\begin{itemize}
+    \item Can we detect the communication network over time, i.e. who interacts with whom, using verbal and/or non-verbal cues?
+    \item Are the features of this network, e.g. centrality of each member, correlated with subjective group measures? Can those features predict any subjective group measures, e.g. group identification?
+    \item Can the robotic agent accurately infer the communication network in runtime?
+    \item How can the robotic agent adapt its behaviour upon perceiving the communication network of its team?
+\end{itemize}
+
+In order to address these questions, we will create a new scenario that can increase the amount of interaction among team members compared to our previous scenarios of Sueca and For The Record (Section~\ref{sec:scenario}). Furthermore, we are considering a sequence of three user studies. The first one aims at collecting data from human participants playing this collaborative game in order to later develop the behaviours of a robotic teammate that will play the same game (Section~\ref{sec:fw-study1}). In the second user study, human participants will play together with the robot and the data collection will allow us to analyse communication patterns of the team (Section~\ref{sec:fw-study2}). Finally, the third user study will explore adaptive mechanisms on the behaviours of the robot and their impact on the communication network of the team (Section~\ref{sec:fw-study3}).
+
+\section{For The Planet - Collaborative Game Scenario}
+\label{sec:scenario}
+The scenario is a collaborative game called For The Planet. It can be considered a new and improved version of the previous For The Record\footnote{\url{http://gaips.tagus.ist.utl.pt/~fcorreia/AAMAS19-FTR-demo.mp4}}, which was used in the experiment detailed in Chapter~\ref{chapter:pro-sociality}.
+
+Generally, the game can be played by $N$ players and takes $R$ rounds. During each round, players face a decision of allocating $P$ points among two distinct abilities in the game. These abilities map either the degree of altruistic cooperation for the team, or the degree of individual income they can selfishly collect. In the end of the $R$ rounds, an objective measure of cooperation can be calculated for each player according to the sum of points he allocated in favour of the team.
+
+There are two important distinctions between For The Planet and For The Record. The metaphor of the first game is related to the environment and climate change policies, while the latter has musical theme with purely entertaining purposes. We believe that the current concerns and discussions on the topic of climate change will engage people to interact more with each other while playing For The Planet. The second distinction is the non-binary choice between cooperating and defecting, previously imposed in For The Record. In other words, For The Planet allows players to choose the level of cooperation between a defined range of integers.
+
+A completely new feature that was introduced into For The Planet (i.e., a feature that For The Record did not contain) is a free discussion period before players have to decide the allocation of their points. This free discussion period constitutes a face-to-face communication phase where, although players have no rules, they are expected to negotiate or persuade others of what to do next or comment their previous decisions. 
+
+\section{Study 1 - Data Collection of Human Participants}
+\label{sec:fw-study1}
+The main goal of this first user study is to collect and analyse the behaviours that occur during the free discussion periods, which were not 
+included in our previous version of the game. The development of behaviours for the robot in those particular situations can be hard to design without analysing first how do humans perform those negotiations. Therefore, we believe that creating those behaviours based on how humans communicate in those situations is a suitable approach.
+
+A secondary goal of this study is to test and pilot the future setup that will accommodate the robotic player. Moreover, we plan to collect subjective perceptions of the group and of each individual teammate to test the reliability of the intended scales on this scenario.
+
+\subsection{Participants}
+Each session will have 3 players ---2 human participants and 1 confederate. The confederate will play the game according to a script and will ensure the discussion will be focused on game-related matters. We aim at collecting a small sample of 3 or 4 groups of adults (6 or 8 participants), outside the university campus and controlling for their mutual acquaintance.
+
+\subsection{Materials}
+The materials include: 1 tablet to play the game; 3 cameras that should be placed in front of each participant; and 3 lapel microphones. In terms of subjective scales for a final survey, we will use: group identification\cite{leach2008group}; group trust\cite{allen2004exploring}; group cohesiveness\cite{hoegl2001teamwork}; group rapport\cite{lafrance1979nonverbal}; perception of emergent leaders; perception of conflict.
+
+\subsection{Procedure}
+Participants will start watching the researcher playing a training game (according to a script), and they are allowed to ask questions in order to understand the rules of the game. Then, they play the game together and they finish the experiment with a final questionnaire.
+
+%\subsection{Analysis}
+%Overall, this user study will serve as a pilot of the game itself, the setup and the measurements. We would like to understand the variability of interactions that can emerge and how dependent those interactions are on the previous actions in the game. In particular, a current concern is if participants will discuss anything after everyone have cooperated with the team. In other words, we believe the degree of discussion is negatively correlated the cooperation rate in the previous rounds. If that is the case, future studies should consider the usage of confederates that assure the presence of non-cooperative behaviours, for instance.
+
+%Regarding the development of behaviours for the robotic teammate, we would like to emphasise that we will carefully choose more neutral interactions (i.e., non-conflicting interactions). Although we acknowledge that the free discussion will allow for emergent leaders trying to persuade others, this is an important consideration to analyse participants' verbal and non-verbal behaviours.
+
+\section{Study 2 - Data Collection of Human-Robot Teams}
+\label{sec:fw-study2}
+The second user study will be a follow-up of the first one. The idea is to script the verbal and non-verbal behaviours of the robot according to the interactions among humans from the previous study. The goal of study 2 is to collect data of human participants partnering with the robot.
+
+\subsection{Participants}
+Each session will have 2 human participants that will partner with the robotic teammate. We aim at collecting at least 30 groups of adults (60 participants), outside the university campus and controlling for their mutual acquaintance.
+
+\subsection{Materials}
+The materials include: 1 robot; 1 tablet to play the game; 2 cameras that should be placed in front of each participant; and 2 lapel microphones. In terms of subjective scales for a final survey, we will use: group identification\cite{leach2008group}; group trust\cite{allen2004exploring}; group cohesiveness\cite{hoegl2001teamwork}; group rapport\cite{lafrance1979nonverbal}; perception of emergent leaders; perception of conflict.
+
+\subsection{Procedure}
+Participants will start watching the researcher playing a training game (according to a script), and they are allowed to ask questions in order to understand the rules of the game. Then, they play the game with robot and they finish the experiment with a final questionnaire.
+
+\subsection{Analysis}
+The main analysis will use techniques from the Social Network Analysis (SNA) in order to derive the communication network of each team based on the speech acts between players during the game. In particular, we are currently interested in assessing the degree of centrality of each member. Additionally, we will perform a correlation analysis between the objective measures extracted from the communication network and the subjective measures assessed in the final survey. If we find strong and significant correlations, we will also try to create offline predictive models of the subjective measures using machine learning techniques.
+
+
+\section{Study 3 - Exploring adaptive behaviours}
+\label{sec:fw-study3}
+In the third study, we aim at exploring new adaptive mechanisms to decide the behaviours of the robotic teammate. The idea is to infer the communication network in run-time (i.e., during the interaction) and intervene to modify that network. For instance, previous findings reported the satisfaction and closeness of a team can be hindered by the presence of members with high levels of centrality \cite{shaw1964communication}. A possible mechanism to cope with such issues could be to elicit interactions between members with low levels of centrality. The particular design of this user study is still a work in progress as it depends on the of the previous stages.
+
+
+%\section{Follow-up Avenues}
+%Succeeding in the previous tasks constitutes a significant step forward on the collaboration between humans and robots in small groups. Nevertheless, there are at least two interesting avenues to further explore: (1) how does the communication network change as the robotic teammate changes its actions in the game or its social behaviours; (2) how does the communication network change as the number of robots on the team increases.

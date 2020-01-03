@@ -1,0 +1,53 @@
+%%% PLOT FILE - Perceptions of the robots - interaction effect on competence between robot and condition
+\begin{tikzpicture}%
+\begin{axis}[%
+    %ybar,%
+    %title=Test,%
+    axis y line*=left, axis x line*=bottom,%
+    ymin=0,
+    ymax=7.5,
+    ytick={1,2,...,7},
+    legend style={at={(1.4,1)}},
+    %x tick label style={rotate=45,anchor=east},%
+    symbolic x coords={Winning,Losing},%
+    xtick=data,
+    enlarge x limits=1,
+    bar width=15pt,
+    height=5.5cm,
+    %ylabel=difference in \%,%
+        ]%
+\addplot+[
+    color=black, %
+    %mark size=4pt,
+    mark options={
+    fill={rgb,255:red,173; green,192; blue,202},%
+    },
+    error bars, y dir=both, y explicit]
+				coordinates {
+				(Winning,4.70) +- (Winning,0.382)
+				(Losing,4.88) +- (Losing,0.376)};
+\addplot+[%
+    color=black, %
+    mark size=2pt,
+    mark options={
+    fill={rgb,255:red,87; green,87; blue,94},%
+    },
+    error bars/.cd,%
+    y dir=both,%
+    y explicit,%
+        ]%
+coordinates {
+            (Winning,4.17) +- (Winning,0.358)
+            (Losing,3.62) +- (Losing,0.353)
+        };%
+
+
+\draw (axis cs:Losing,4.25) ++ (10pt,-10pt) -- ++(0pt,20pt);
+\node[anchor=south] at (140,380) {***};
+
+%\draw (axis cs:Winning,4.4) ++ (-10pt,-10pt) -- ++(0pt,20pt);
+%\node[anchor=south] at (-30,410) {n.s.};
+
+\legend{Cooperator,Defector}
+\end{axis}%
+\end{tikzpicture}%

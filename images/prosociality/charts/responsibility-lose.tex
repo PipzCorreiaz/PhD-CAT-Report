@@ -1,0 +1,43 @@
+%%% PLOT FILE - Responsibility attribution in the losing condition
+\begin{tikzpicture}%
+\begin{axis}[%
+    ybar,
+    %title=Test,%
+    axis y line*=left, axis x line*=bottom,%
+    ymin=0,
+    ymax=7.5,
+    ytick={1,2,...,7},
+    %legend style={at={(1.4,1)}},
+    x tick label style={rotate=25,anchor=east},%
+    symbolic x coords={Randomness,Participant's Strat.,Defector's Strat.,Cooperator's Strat.},%
+    xtick=data,
+    x=36pt,
+    enlarge x limits=0.5,
+    height=5.5cm,
+    bar width=15pt,
+    xticklabel style={font=\footnotesize}
+    %ylabel=difference in \%,%
+        ]%
+\addplot+[
+    color=black,
+    fill={rgb,255:red,202; green,53; blue,66},%
+    error bars, y dir=both, y explicit]
+				coordinates {
+				(Randomness,3.50) +- (Randomness,0.58)
+				(Participant's Strat.,3.26) +- (Participant's Strat. Strat.,0.49)
+				(Defector's Strat.,5.56) +- (Defector's Strat.,0.53)
+				(Cooperator's Strat.,3.26) +- (Cooperator's Strat.,0.59)};
+    
+\addplot[black, sharp plot]%
+    coordinates {(Participant's Strat.,6.3) (Defector's Strat.,6.3)}%
+    node[above] at (150,610) {*};%
+\addplot[black, sharp plot]%
+    coordinates {(Defector's Strat.,6.6) (Cooperator's Strat.,6.6)}%
+    node[above] at (250,640) {*};%
+\addplot[black, sharp plot]%
+    coordinates {(Randomness,6.9) (Defector's Strat.,6.9)}%
+    node[above] at (100,670) {*};%
+%\draw (axis cs:Participant's Strat.,6.5) ++ (-10pt,0pt) -- ++(20pt,0pt);
+%\node[anchor=south] at (axis cs:Participant's Strat.,6.5) {***};
+\end{axis}%
+\end{tikzpicture}%
